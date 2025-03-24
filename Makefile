@@ -5,7 +5,7 @@ CC		:=	"cc"
 CFLAGS	:=	-Wall -Wextra -Werror
 
 ###			###			SOURCES			###			###
-SRC		:=	ft_strlen.asm ft_strcpy.asm
+SRC		:=	ft_strlen.asm ft_strcpy.asm ft_strcmp.asm
 
 VPATH	:= src/
 
