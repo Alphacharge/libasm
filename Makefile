@@ -2,10 +2,11 @@ NAME	:=	libasm.a
 
 ###			###			COMPILER		###			###
 CC		:=	"cc"
-CFLAGS	:=	-Wall -Wextra -Werror
+CFLAGS	:=	-Wall -Wextra -Werror -fPIE
 
 ###			###			SOURCES			###			###
 SRC		:=	ft_strlen.asm ft_strcpy.asm ft_strcmp.asm
+SRC		+=	ft_strdup.asm
 
 VPATH	:= src/
 
