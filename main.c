@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 extern size_t	ft_strlen(const char *str);
 extern char		*ft_strcpy(char *dest, const char *src);
 extern int		ft_strcmp(const char *s1, const char *s2);
+extern char		*ft_strdup(const char *s);
 
 int main() {
 	const char	*src = "Hello, world!";
@@ -36,6 +38,14 @@ int main() {
 	diff = ft_strcmp(src, test);
 	printf("diff between src:>%s< and test: >%s< is %d\t|strcmp say's %d\n", src, test, diff, strcmp(src, test));
 	diff = ft_strcmp(test, src);
-	printf("diff between test:>%s< and src: >%s< is %d\t|strcmp say's %d\n", test, src, diff, strcmp(test, src));
+	printf("diff between test:>%s< and src: >%s< is %d\t|strcmp say's %d\n\n", test, src, diff, strcmp(test, src));
+	
+	//ft_strdup
+	char	*new;
+	printf("#####-----Testing ft_strdup-----#####\n");
+	printf("src is:>%s< on address: >%p<\n", src, src);
+	new = ft_strdup(src);
+	printf("new is:>%s< on address: >%p<\n", new, new);
+	free(new);
 	return (0);
 }
