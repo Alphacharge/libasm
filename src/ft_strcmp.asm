@@ -22,9 +22,9 @@ ft_strcmp:
 	jmp	.loop
 
 .done:
-	; safe rsi from overwriting
-	mov	al, [rsi]
-	sub	al, [rdi]
+	; safe rdi from overwriting
+	mov	al, [rdi]
+	sub	al, [rsi]
 
 	; move sign extended value from al back in rax
 	movsx rax, al
