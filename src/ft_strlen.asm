@@ -1,6 +1,7 @@
+default rel
 section .text
 global ft_strlen
-ft_strlen:
+function:
 	; set return value to 0
 	mov	rax, 0
 .loop:
