@@ -1,8 +1,8 @@
 NAME	:=	libasm.a
 
 ###			###			COMPILER		###			###
-CC		:=	"cc"
-CFLAGS	:=	-Wall -Wextra -Werror -fPIE
+CC		:=	cc
+CFLAGS	:=	-Wall -Wextra -Werror
 
 ###			###			SOURCES			###			###
 SRC		:=	ft_strlen.asm ft_strcpy.asm ft_strcmp.asm
@@ -53,8 +53,7 @@ fclean: clean
 re: fclean all
 
 test: all
-	@$(CC) $(CFLAGS) -c main.c -o obj/main.o
-	@$(CC) $(CFLAGS) obj/main.o $(NAME) -o test
+	@$(CC) $(CFLAGS) main.c $(NAME) -o test
 
 .PHONY: all clean fclean re
 
